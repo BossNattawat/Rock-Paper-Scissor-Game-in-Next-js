@@ -49,11 +49,11 @@ export default function Home() {
   }, [computerChoice])
 
   return (
-    <div className="flex items-center justify-center min-w-full min-h-screen">
-      <div className="flex flex-col justify-center items-center border-4 p-[48px] rounded-3xl bg-slate-900">
+    <div className="flex items-center justify-center min-w-full min-h-screen bg-black">
+      <div className="flex flex-col justify-center items-center border-4 p-[48px] border-white rounded-3xl bg-slate-900">
 
         <div className="mb-10 text-center">
-          <h1 className="font-extrabold text-3xl">WELCOME TO ROCK, PAPER, SCISSORS GAME</h1>
+          <h1 className="font-extrabold text-3xl text-white">WELCOME TO ROCK, PAPER, SCISSORS GAME</h1>
         </div>
 
         <div className="flex lg:flex-row flex-col">
@@ -64,10 +64,10 @@ export default function Home() {
 
         <div className="text-center my-9">
 
-          <h1 className="text-3xl font-extrabold mb-9">{result}</h1>
+          <h1 className="text-3xl font-extrabold mb-9 text-white">{result}</h1>
 
-          <h3 className="text-xl font-semibold">Your choice : {humanChoice}</h3>
-          <h3 className="text-xl font-semibold">Computer's choice : {computerChoice}</h3>
+          <h3 className="text-xl font-semibold text-white">Your choice : {humanChoice}</h3>
+          <h3 className="text-xl font-semibold text-white">Computer's choice : {computerChoice}</h3>
         </div>
 
         <div className="text-center">
