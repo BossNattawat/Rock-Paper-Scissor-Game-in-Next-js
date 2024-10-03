@@ -5,7 +5,7 @@ import react, { useState, useEffect } from "react";
 export default function Home() {
 
   const [humanChoice, setHumanChoice] = useState("")
-  const [computerChoice, setComputerChoice] = useState("")
+  const [computerChoice, setComputerChoice] = useState(null)
 
   const [humanScore, setHumanScore] = useState(0)
   const [computerScore, setComputerScore] = useState(0)
@@ -46,12 +46,15 @@ export default function Home() {
       setComputerScore(computerScore + 1);
       setResult("Computer Win!")
     }
+    else if(humanChoice === computerChoice){
+      setResult("Tie!")
+    }
   }, [computerChoice])
 
   return (
     <div className="flex items-center justify-center min-w-full min-h-screen bg-black">
       <div className="flex flex-col justify-center items-center border-4 p-[48px] border-white rounded-3xl bg-slate-900">
-
+        
         <div className="mb-10 text-center">
           <h1 className="font-extrabold text-3xl text-white">WELCOME TO ROCK, PAPER, SCISSORS GAME</h1>
         </div>
@@ -63,9 +66,7 @@ export default function Home() {
         </div>
 
         <div className="text-center my-9">
-
           <h1 className="text-3xl font-extrabold mb-9 text-white">{result}</h1>
-
           <h3 className="text-xl font-semibold text-white">Your choice : {humanChoice}</h3>
           <h3 className="text-xl font-semibold text-white">Computer's choice : {computerChoice}</h3>
         </div>
